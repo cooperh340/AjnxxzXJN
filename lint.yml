@@ -3,7 +3,6 @@ name: SwiftLint
 on:
   pull_request:
     paths:
-      - '.github/workflows/swiftlint.yml'
       - '.swiftlint.yml'
       - '**/*.swift'
 
@@ -16,7 +15,6 @@ jobs:
         run: exec ./.github/scripts/remove_todos.sh
       - name: GitHub Action for SwiftLint
         uses: norio-nomura/action-swiftlint@3.2.1
-      - name: GitHub Action for SwiftLint with --strict
         uses: norio-nomura/action-swiftlint@3.2.1
         with:
           args: --strict
